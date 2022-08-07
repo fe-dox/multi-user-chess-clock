@@ -3,7 +3,9 @@
 Multi User Chess Clock makes playing games like UNO with chess clock easy.
 You can host it on your own or use the version I am hosting.
 
+It's using [GUN](https://gun.eco)
 
+Speed is not as good as I'd like it to be
 
 
 ## Demo
