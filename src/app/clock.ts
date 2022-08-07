@@ -2,6 +2,7 @@ import GUN, {IGunInstance} from "gun";
 import "gun/lib/open.js";
 import "gun/lib/load.js"
 import {ClockMode, ClockSettings, IClock, UserClock} from './interfaces/i-clock';
+import {environment} from "../environments/environment";
 
 export default class Clock {
   get clockId(): string {
@@ -18,7 +19,7 @@ export default class Clock {
   private _won: Function | undefined;
   private _tick: Function | undefined;
   private _order: null | number;
-  private static gun: IGunInstance = GUN({peers: ["https://clock.fedox.pl/gun"]})
+  private static gun: IGunInstance = GUN({peers: environment.peers})
   private internalClockReference;
   private clockReference;
   private _orderManager: OrderManager;
@@ -229,7 +230,7 @@ export default class Clock {
   }
 
   public async SetOrder() {
-    let nowR = await (await fetch("https://clock.fedox.pl/time")).json()
+    let nowR = await (await fetch(environment.timeSource)).json()
     let now = !!nowR.now ? nowR.now : Date.now()
     this.clockReference.get("users").get(Clock.GetDeviceId()).get("order").put(now);
     this.Tick()
