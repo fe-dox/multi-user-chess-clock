@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import '@angular/cdk/overlay-prebuilt.css';
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Exo 2', sans-serif;
+}
+body {
+  min-height: 100%;
+  background: dimgray;
+  width: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+@import './font-awesome/scss/fontawesome.scss';
+@import "./font-awesome/scss/solid.scss";
+
+.tui-space_right-3{
+  margin-right:3%;
+}
+
+
+// Overlay backdrop styling
+.overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+// Overlay panel styling
+.overlay-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: dimgray;
+  padding: 20px;
+  border-radius: 7px;
+}

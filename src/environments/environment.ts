@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  /* A time source that the app will use to decide order. */
+  timeSource: "https://clock.fedox.pl/time",
+  /* A list of peers that the app will connect to. */
+  peers: ["https://clock.fedox.pl/gun"]
 };
 
 /*

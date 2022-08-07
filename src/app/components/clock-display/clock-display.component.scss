@@ -1,0 +1,105 @@
+$btnColor: #a12d00;
+.clock-container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-button {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  background-color: $btnColor;
+  width: 70%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 25px 0 darken($btnColor, 15%);
+
+  &:active {
+    transform: translateY(25px);
+    box-shadow: none;
+  }
+}
+
+.not-saturated {
+  background-color: desaturate($btnColor, 80%);
+  box-shadow: 0 20px 0 darken(desaturate($btnColor, 80%), 15%);
+}
+
+.time {
+  font-size: 20vw;
+}
+
+.all-container {
+  padding-top: 3%;
+  display: flex;
+  width: 100%;
+  height: 90%;
+  flex-direction: column;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.settings-container {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.settings-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35pt;
+  @each $color in (darkgray, lightgreen, yellow) {
+    &_#{$color} {
+      box-shadow: 0 12px 0 darken($color, 15%);
+      background-color: $color;
+
+      &:active {
+        transform: translateY(12px);
+        box-shadow: none;
+      }
+    }
+  }
+
+}
+
+.pause-button {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45pt;
+  border-radius:12px;
+  height: 10%;
+  margin-bottom: 20px;
+  background-color: darkgray;
+  box-shadow: 0 20px 0 darken(darkgray, 15%);
+  &:active {
+    transform: translateY(20px);
+    box-shadow: none;
+  }
+}
+
+.code-display{
+  color: white;
+  font-size: 30pt;
+}

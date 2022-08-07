@@ -1,0 +1,24 @@
+<div class="settings-container">
+  <div class="description">Mode</div>
+  <div class="setting">
+    <div class="button button_darkgray"><i class="fa-solid fa-minus"></i></div>
+    <div class="value-display">FISCH.</div>
+    <div class="button button_darkgray"><i class="fa-solid fa-plus"></i></div>
+  </div>
+  <div class="description">Beginning time</div>
+  <div class="setting">
+    <div class="button button_darkgray" (click)="removeBeginningTime()"><i class="fa-solid fa-minus"></i></div>
+    <div class="value-display">{{beginningTime|duration}}</div>
+    <div class="button button_darkgray" (click)="addBeginningTime()"><i class="fa-solid fa-plus"></i></div>
+  </div>
+  <div class="description">Time Added</div>
+  <div class="setting">
+    <div class="button button_darkgray" (click)="removeTimeAdded()"><i class="fa-solid fa-minus"></i></div>
+    <div class="value-display">{{timeAdded|duration}}</div>
+    <div class="button button_darkgray" (click)="addTimeAdded()"><i class="fa-solid fa-plus"></i></div>
+  </div>
+  <div class="setting last">
+    <div class="button button_lightgray button_big" (click)="cancel()"><i class="fa-solid fa-xmark"></i></div>
+    <div class="button button_lightgreen button_big" (click)="save()"><i class="fa-solid fa-check"></i></div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-height: 70%;
+  justify-content: space-around;
+  align-items: center;
+
+  .setting {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+
+  .description{
+    color: white;
+  }
+
+  .last{
+    margin-bottom: 12px;
+  }
+
+  .value-display{
+    justify-self: center;
+    color: white;
+    font-size: 42pt;
+  }
+
+  .button {
+    width: 60px;
+    height: 60px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35pt;
+    @each $color in (darkgray, lightgreen, lightgray) {
+      &_#{$color} {
+        box-shadow: 0 12px 0 darken($color, 15%);
+        background-color: $color;
+
+        &:active {
+          transform: translateY(12px);
+          box-shadow: none;
+        }
+      }
+    }
+    &_big{
+      width: 45%;
+    }
+
+  }
+}

@@ -1,0 +1,22 @@
+<div class="all-container" *ngIf="clock != undefined">
+  <div class="settings-container">
+    <div class="settings-button settings-button_darkgray" (click)="OpenSettings()">
+      <i class="fa-solid fa-gear"></i>
+    </div>
+    <div class="code-display">{{clock.clockId.toUpperCase()}}</div>
+    <div class="settings-button settings-button_lightgreen" (click)="ResetClock()">
+      <i class="fa-solid fa-arrow-rotate-right"></i>
+    </div>
+  </div>
+  <div class="clock-container">
+    <div [ngClass]="{'clock-button':true, 'not-saturated': !clock.ticking}" (click)="Next()">
+      <div class="time" *ngIf="display != 'won' && display != 'lost'">{{display}}</div>
+      <div class="time" *ngIf="display == 'lost'"><i class="fa-solid fa-skull-crossbones"></i></div>
+      <div class="time" *ngIf="display == 'won'"><i class="fa-solid fa-trophy-star"></i></div>
+    </div>
+  </div>
+  <div class="pause-button" (click)="Pause()">
+    <i class="fa-solid fa-pause"></i>
+  </div>
+</div>
+

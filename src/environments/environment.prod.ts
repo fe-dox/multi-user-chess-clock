@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  timeSource: "https://clock.fedox.pl/time",
+  peers: ["https://clock.fedox.pl/gun"],
 };
