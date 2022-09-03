@@ -5,7 +5,7 @@ You can host it on your own or use the version I am hosting.
 
 It's using [GUN](https://gun.eco)
 
-Speed is not as good as I'd like it to be
+Probably needs to be rewritten
 
 
 ## Demo
